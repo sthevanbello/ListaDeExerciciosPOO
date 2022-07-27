@@ -9,10 +9,6 @@ namespace ListaPOO.Interfaces
 {
     public interface IJogador
     {
-        EAcoes Acoes { get; set; }
-        string Nome { get; set; }
-        float Vida { get; set; }
-
         void TrocarAcao();
         string Morrer();
     }

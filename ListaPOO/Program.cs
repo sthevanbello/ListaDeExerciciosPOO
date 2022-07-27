@@ -38,6 +38,15 @@ namespace ListaPOO
             Console.WriteLine(Calculadora.Dividir(valores));
             Console.WriteLine(Calculadora.Multiplicar(valores));
 
+            Jogador jogador1 = new Jogador(nome: "Bart");
+            Jogador jogador2 = new Jogador(nome: "Lisa", vida: 100);
+            jogador1.TrocarAcao();
+            Console.WriteLine(jogador1.Morrer());
+            Console.WriteLine($"\nVida do jogador: {jogador1.Vida}");
+
+            jogador2.TrocarAcao();
+            Console.WriteLine(jogador2.Morrer());
+            Console.WriteLine($"\nVida do jogador: {jogador2.Vida}");
         }
     }
 }

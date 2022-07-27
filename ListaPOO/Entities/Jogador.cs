@@ -10,9 +10,20 @@ namespace ListaPOO.Entities
 {
     public class Jogador : IJogador
     {
+        public Jogador(string nome)
+        {
+            Nome = nome;
+        }
+
+        public Jogador(string nome, float vida)
+        {
+            Nome = nome;
+            Vida = vida;
+        }
+
+        public EAcoes Acoes { get; set; }
         public string Nome { get; set; }
         public float Vida { get; set; }
-        public EAcoes Acoes { get; set; }
 
         public string Morrer()
         {
