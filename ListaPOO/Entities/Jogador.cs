@@ -10,11 +10,21 @@ namespace ListaPOO.Entities
 {
     public class Jogador : IJogador
     {
+        /// <summary>
+        /// Construtor da classe Jogador
+        /// <para>Caso não seja passado o valor de Vida, o padrão será 80</para>
+        /// </summary>
+        /// <param name="nome"></param>
         public Jogador(string nome)
         {
             Nome = nome;
+            Vida = 80;
         }
-
+        /// <summary>
+        /// Construtor da classe Jogador
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="vida"></param>
         public Jogador(string nome, float vida)
         {
             Nome = nome;
@@ -61,6 +71,11 @@ namespace ListaPOO.Entities
                         break;
                 }
             } while (!sair);
+        }
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome}";
         }
     }
 }

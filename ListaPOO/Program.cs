@@ -1,6 +1,7 @@
 ﻿using ListaPOO.Entities;
 using ListaPOO.Tools;
 using System;
+using System.Collections.Generic;
 
 namespace ListaPOO
 {
@@ -40,13 +41,23 @@ namespace ListaPOO
 
             Jogador jogador1 = new Jogador(nome: "Bart");
             Jogador jogador2 = new Jogador(nome: "Lisa", vida: 100);
-            jogador1.TrocarAcao();
+            Jogador jogador3 = new Jogador(nome: "Larry", vida: 85);
+            //jogador1.TrocarAcao();
             Console.WriteLine(jogador1.Morrer());
             Console.WriteLine($"\nVida do jogador: {jogador1.Vida}");
 
-            jogador2.TrocarAcao();
+            //jogador2.TrocarAcao();
             Console.WriteLine(jogador2.Morrer());
             Console.WriteLine($"\nVida do jogador: {jogador2.Vida}");
+
+            List<Jogador> listaJogadores = new List<Jogador>();
+            listaJogadores.Add(jogador1);
+            listaJogadores.Add(jogador2);
+            listaJogadores.Add(jogador3);
+            foreach (var jogador in listaJogadores)
+            {
+                Console.WriteLine(jogador);
+            }
         }
     }
 }
