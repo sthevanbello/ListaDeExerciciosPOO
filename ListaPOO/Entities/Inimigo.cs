@@ -9,7 +9,7 @@ namespace ListaPOO.Entities
     public abstract class Inimigo
     {
         public string Nome { get; set; }
-        public float Vida { get; set; } = 100;
+        private float Vida = 100;
 
         public string Atacar()
         {
@@ -17,7 +17,11 @@ namespace ListaPOO.Entities
         }
         public string Defender()
         {
+            Vida -= 5;
 
+
+            Console.WriteLine($"Defesa realizada!");
+            Console.WriteLine($"Vida do inimigo: {Vida}");
             return "Inimigo defendeu";
         }
     }
