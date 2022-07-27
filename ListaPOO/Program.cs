@@ -7,13 +7,13 @@ namespace ListaPOO
     {
         static void Main(string[] args)
         {
-            Patrulheiro patrulheiro = new Patrulheiro();
+            Patrulheiro patrulheiro = new Patrulheiro(80);
             Voador voador = new Voador();
 
             patrulheiro.Nome = "Homer";
             // patrulheiro.Vida = 1000;
             patrulheiro.Perseguidor = false;
-            patrulheiro.Velocidade = 80;
+            //patrulheiro.Velocidade = 80;
 
             voador.Nome = "Marge";
             // voador.Vida = 1500;
