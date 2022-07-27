@@ -1,4 +1,5 @@
 ﻿using ListaPOO.Entities;
+using ListaPOO.Tools;
 using System;
 
 namespace ListaPOO
@@ -25,11 +26,18 @@ namespace ListaPOO
             Console.WriteLine(voador.Atacar());
             Console.WriteLine(patrulheiro.Defender());
             Console.WriteLine(patrulheiro.Atacar());
-            Console.WriteLine(voador.Defender());            
+            Console.WriteLine(voador.Defender());
             Console.WriteLine(voador.Atacar());
             Console.WriteLine(patrulheiro.Defender());
             Console.WriteLine(patrulheiro.Atacar());
             Console.WriteLine(voador.Defender());
+
+            float[] valores = { 10, 3, 5, 2, 2 };
+            Console.WriteLine(Calculadora.Somar(valores));
+            Console.WriteLine(Calculadora.Subtrair(valores));
+            Console.WriteLine(Calculadora.Dividir(valores));
+            Console.WriteLine(Calculadora.Multiplicar(valores));
+
         }
     }
 }
