@@ -11,7 +11,7 @@ namespace ListaPOO.Entities
         public string Nome { get; set; }
         private float Vida = 100;
 
-        public string Atacar()
+        public virtual string Atacar()
         {
             return "Inimigo atacou";
         }

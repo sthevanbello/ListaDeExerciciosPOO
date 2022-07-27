@@ -12,7 +12,7 @@ namespace ListaPOO.Entities
         public float Velocidade { get; set; }
         public string Patrulhar()
         {
-            return "Inimigo patrulheiro está patrulhando";
+            return "Inimigo patrulheiro está realizando a patrulha";
         }
     }
 }
