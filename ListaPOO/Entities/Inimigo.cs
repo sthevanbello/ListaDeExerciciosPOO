@@ -18,8 +18,6 @@ namespace ListaPOO.Entities
         public string Defender()
         {
             Vida -= 5;
-
-
             Console.WriteLine($"Defesa realizada!");
             Console.WriteLine($"Vida do inimigo: {Vida}");
             return "Inimigo defendeu";

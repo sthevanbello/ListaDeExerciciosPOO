@@ -8,27 +8,37 @@ namespace ListaPOO.Tools
 {
     public static class Calculadora
     {
-        public static float Somar(float[] valores)
+        public static void Somar(float[] valores)
         {
             //var resultado = valores.Sum();
-            float resultado = 0;
-
-            foreach (var valor in valores)
+            try
             {
-                resultado += valor;
+                float resultado = 0;
+
+                foreach (var valor in valores)
+                {
+                    resultado += valor;
+                }
+                //return resultado;
+                Console.WriteLine(resultado);
             }
-            //return resultado;
-            return resultado;
+            catch (Exception e)
+            {
+                //throw new Exception("Valores inválidos");
+                Console.WriteLine(e.Message);
+
+            }
         }
 
-        public static float Subtrair(float[] valores)
+        public static void Subtrair(float[] valores)
         {
             float resultado = 0;
             foreach (var valor in valores)
             {
                 resultado -= valor;
             }
-            return resultado;
+            //return resultado;
+            Console.WriteLine(resultado);
         }
 
         /// <summary>
@@ -40,32 +50,42 @@ namespace ListaPOO.Tools
         /// <param name="valores"></param>
         /// <returns>Resultado da divisão dos elementos no formato <b>float</b></returns>
         /// <exception cref="Exception"></exception>
-        public static float Dividir(float[] valores) 
+        public static void Dividir(float[] valores)
         {
+
+
             float resultado = valores[0];
             try
             {
+                if (valores.Length == 0)
+                {
+                    throw new Exception("Não há valores válidos");
+                }
                 for (int i = 0; i < valores.Length - 1; i++)
                 {
-                    resultado /= valores[i+1];
+                    resultado /= valores[i + 1];
                 }
-                return resultado;
+                //return resultado;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                throw new Exception("Revise os valores informados");
+                //return 0;
+                //throw new Exception("Revise os valores informados");
             }
+
+
         }
 
-        public static float Multiplicar(float[] valores)
+        public static void Multiplicar(float[] valores)
         {
-            float resultado = 0;
+            float resultado = 1;
             foreach (var valor in valores)
             {
                 resultado *= valor;
             }
-            return resultado;
+            //return resultado;
+            Console.WriteLine(resultado);
         }
     }
 }
