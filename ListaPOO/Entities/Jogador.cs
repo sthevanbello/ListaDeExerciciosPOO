@@ -41,12 +41,16 @@ namespace ListaPOO.Entities
             return "---- Game Over ----";
         }
 
+        /// <summary>
+        /// Trocar ação do jogador de acordo com a tecla apertada
+        /// </summary>
         public void TrocarAcao()
         {
             bool sair = false;
             do
             {
                 ConsoleKey key = Console.ReadKey(true).Key;
+
                 switch (key)
                 {
                     case ConsoleKey.W:
