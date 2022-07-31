@@ -34,8 +34,9 @@ namespace ListaPOO
             //Console.WriteLine(voador.Defender());
 
             //float[] valores = null;
-            float[] valores = { 5, 6, 8, 12, 7 };
+            float[] valores = { 1, 2, 3, 4, 5 };
             //float[] valores = { };
+            Calculadora.ExibirValores(valores);
             Calculadora.Somar(valores);
             Calculadora.Subtrair(valores);
             Calculadora.Dividir(valores);

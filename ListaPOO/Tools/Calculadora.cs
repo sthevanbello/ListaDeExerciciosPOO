@@ -8,6 +8,14 @@ namespace ListaPOO.Tools
 {
     public static class Calculadora
     {
+        public static void ExibirValores(float[] valores)
+        {
+            foreach (var valor in valores)
+            {
+                Console.WriteLine($"{valor} ");
+            }
+            Console.WriteLine();
+        }
         public static void Somar(float[] valores)
         {
             //var resultado = valores.Sum();
@@ -19,26 +27,29 @@ namespace ListaPOO.Tools
                 {
                     resultado += valor;
                 }
-                //return resultado;
-                Console.WriteLine(resultado);
+                Console.WriteLine($"Soma: {resultado}");
             }
             catch (Exception e)
             {
-                //throw new Exception("Valores inválidos");
                 Console.WriteLine(e.Message);
-
             }
         }
 
         public static void Subtrair(float[] valores)
         {
-            float resultado = 0;
-            foreach (var valor in valores)
+            try
             {
-                resultado -= valor;
+                float resultado = valores[0];
+                for (int i = 0; i < valores.Length - 1; i++)
+                {
+                    resultado -= valores[i + 1];
+                }
+                Console.WriteLine($"Subtração: {resultado}");
             }
-            //return resultado;
-            Console.WriteLine(resultado);
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         /// <summary>
@@ -52,20 +63,14 @@ namespace ListaPOO.Tools
         /// <exception cref="Exception"></exception>
         public static void Dividir(float[] valores)
         {
-
-
-            float resultado = valores[0];
             try
             {
-                if (valores.Length == 0)
-                {
-                    throw new Exception("Não há valores válidos");
-                }
+                float resultado = valores[0];
                 for (int i = 0; i < valores.Length - 1; i++)
                 {
                     resultado /= valores[i + 1];
                 }
-                //return resultado;
+                Console.WriteLine($"Divisão: {resultado}");
             }
             catch (Exception e)
             {
@@ -79,13 +84,19 @@ namespace ListaPOO.Tools
 
         public static void Multiplicar(float[] valores)
         {
-            float resultado = 1;
-            foreach (var valor in valores)
+            try
             {
-                resultado *= valor;
+                float resultado = 1;
+                foreach (var valor in valores)
+                {
+                    resultado *= valor;
+                }
+                Console.WriteLine($"Multiplicação: {resultado}");
             }
-            //return resultado;
-            Console.WriteLine(resultado);
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
